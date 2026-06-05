@@ -59,11 +59,11 @@ export default function App() {
         <nav className="navbar">
           <div className="logo" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>trxvl.</div>
           <div className="nav-links">
-            <a href="#" onClick={handleLogoClick}>Home</a>
-            <a href="#">Stays</a>
-            <a href="#">Flights</a>
-            <a href="#">Packages</a>
-            <a href="#">Sign Up</a>
+            <button type="button" className="nav-link" onClick={handleLogoClick}>Home</button>
+            <button type="button" className="nav-link">Stays</button>
+            <button type="button" className="nav-link">Flights</button>
+            <button type="button" className="nav-link">Packages</button>
+            <button type="button" className="nav-link">Sign Up</button>
           </div>
         </nav>
  
@@ -108,10 +108,10 @@ export default function App() {
           <h2>Top categories</h2>
           <div className="categories-scroll">
             {['🏖️ Beaches', '🌵 Deserts', '🏔️ Mountains', '🏙️ Iconic Cities', '⛵ Houseboats', '🏡 Countryside', '⛺ Camping', '🏰 Castles', '⛷️ Skiing'].map((cat, index) => (
-              <a href="#" className="category-item" key={index} onClick={handleCategoryClick}>
+              <button type="button" className="category-item" key={index} onClick={handleCategoryClick}>
                 <div className="category-icon-emoji">{cat.split(' ')[0]}</div>
                 <span>{cat.split(' ')[1]}</span>
-              </a>
+              </button>
             ))}
           </div>
         </section>
@@ -375,10 +375,10 @@ export default function App() {
  
       {/* --- MOBILE BOTTOM NAV --- */}
       <div className="mobile-bottom-nav">
-        <a href="#" className="nav-item active" onClick={handleLogoClick}><span className="icon">🏠</span>Home</a>
-        <a href="#" className="nav-item"><span className="icon">🏨</span>Stays</a>
-        <a href="#" className="nav-item"><span className="icon">✈️</span>Flights</a>
-        <a href="#" className="nav-item"><span className="icon">🧳</span>Packages</a>
+        <button type="button" className="nav-item active" onClick={handleLogoClick}><span className="icon">🏠</span>Home</button>
+        <button type="button" className="nav-item"><span className="icon">🏨</span>Stays</button>
+        <button type="button" className="nav-item"><span className="icon">✈️</span>Flights</button>
+        <button type="button" className="nav-item"><span className="icon">🧳</span>Packages</button>
       </div>
     </div>
   );
